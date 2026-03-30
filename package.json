@@ -13,7 +13,7 @@
   },
   "scripts": {
     "quartz": "./quartz/bootstrap-cli.mjs",
-    "sync:vault": "powershell -ExecutionPolicy Bypass -File ./scripts/sync-vault.ps1",
+    "sync:vault": "node ./scripts/sync-vault.mjs",
     "build:vault": "npm run sync:vault && npx quartz build",
     "serve:vault": "npm run sync:vault && npx quartz build --serve",
     "docs": "npx quartz build --serve -d docs",
