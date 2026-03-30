@@ -44,6 +44,7 @@ tags:
       <a href="/01-MOCs/p-997fe9326d/">MVKS 总览</a>
       <a href="/01-MOCs/p-74347a7f43/">案例验证总览</a>
       <a href="/06-Theory/p-d92e34877b/">文学理论入口</a>
+      <a href="/11-Appendix/p-34d9250603/">数字人文问答</a>
     </div>
   </section>
 
@@ -120,7 +121,8 @@ tags:
   <div class="path-step"><span>02</span><strong><a href="/01-MOCs/p-74347a7f43/">案例验证总览</a></strong><em>再看项目产出</em></div>
   <div class="path-step"><span>03</span><strong><a href="/01-MOCs/p-984da3f4ec/">人物总览</a> / <a href="/01-MOCs/p-14f6874315/">事件总览</a></strong><em>进入对象层</em></div>
   <div class="path-step"><span>04</span><strong><a href="/06-Theory/p-d92e34877b/">文学理论入口</a></strong><em>补理论框架</em></div>
-  <div class="path-step"><span>05</span><strong><a href="/07-Queries/07-Queries执行看板/">07 Queries 执行看板</a></strong><em>看人机协同如何运作</em></div>
+  <div class="path-step"><span>05</span><strong><a href="/11-Appendix/p-34d9250603/">数字人文问答</a></strong><em>看方法问题如何被持续展开</em></div>
+  <div class="path-step"><span>06</span><strong><a href="/07-Queries/07-Queries执行看板/">07 Queries 执行看板</a></strong><em>看人机协同如何运作</em></div>
 </div>
 
 ## 一句话判断

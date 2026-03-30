@@ -19,6 +19,7 @@ const sections: NavSection[] = [
       { label: "MVKS 总览", slug: "01-MOCs/MVKS-总览" },
       { label: "案例验证总览", slug: "01-MOCs/案例验证总览" },
       { label: "文学理论入口", slug: "06-Theory/文学理论入口" },
+      { label: "数字人文问答", slug: "11-Appendix/数字人文问答" },
     ],
   },
   {
@@ -45,7 +46,7 @@ const sections: NavSection[] = [
 ]
 
 function prettyHref(currentSlug: string, targetSlug: string) {
-  const relative = resolveRelative(currentSlug as any, targetSlug as any)
+  const relative = resolveRelative(currentSlug as never, targetSlug as never)
   return relative.endsWith("/") ? relative : `${relative}/`
 }
 
