@@ -40,34 +40,34 @@ tags:
   <section class="entry-card entry-amber">
     <h3>项目总览</h3>
     <p>先看项目结构、研究边界与验证成果。</p>
-    <ul>
-      <li>[[01 MOCs/MVKS 总览|MVKS 总览]]</li>
-      <li>[[01 MOCs/案例验证总览|案例验证总览]]</li>
-      <li>[[06 Theory/文学理论入口|文学理论入口]]</li>
-    </ul>
+    <div class="entry-links">
+      <a href="/01-MOCs/p-997fe9326d/">MVKS 总览</a>
+      <a href="/01-MOCs/p-74347a7f43/">案例验证总览</a>
+      <a href="/06-Theory/p-d92e34877b/">文学理论入口</a>
+    </div>
   </section>
 
   <section class="entry-card entry-green">
     <h3>五层知识结构</h3>
     <p>从对象层进入整套知识网络。</p>
-    <ul>
-      <li>[[01 MOCs/人物总览|人物总览]]</li>
-      <li>[[01 MOCs/事件总览|事件总览]]</li>
-      <li>[[01 MOCs/制度总览|制度总览]]</li>
-      <li>[[01 MOCs/概念总览|概念总览]]</li>
-      <li>[[06 Theory/06 混合方法与LLM协同|理论总览]]</li>
-    </ul>
+    <div class="entry-links">
+      <a href="/01-MOCs/p-984da3f4ec/">人物总览</a>
+      <a href="/01-MOCs/p-14f6874315/">事件总览</a>
+      <a href="/01-MOCs/p-d7bf0f88d9/">制度总览</a>
+      <a href="/01-MOCs/p-87743d486e/">概念总览</a>
+      <a href="/06-Theory/p-326fbb11c9/">理论总览</a>
+    </div>
   </section>
 
   <section class="entry-card entry-blue">
     <h3>代表案例</h3>
     <p>直接查看已跑通的人机协同案例。</p>
-    <ul>
-      <li>[[07 Queries/07.3_Case_Studies/QCase_国王大事与英格兰脱离罗马|国王大事与脱离罗马]]</li>
-      <li>[[07 Queries/07.3_Case_Studies/QCase_安妮·博林的倒台|安妮·博林的倒台]]</li>
-      <li>[[07 Queries/07.3_Case_Studies/QCase_摩尔审讯中的“誓言、良知与沉默”话语博弈|摩尔审讯中的誓言、良知与沉默]]</li>
-      <li>[[07 Queries/07.4_Cross_Matrices/QCross_“铁与血”vs“纸与墨”的物质意象对峙|铁与血 vs 纸与墨]]</li>
-    </ul>
+    <div class="entry-links">
+      <a href="/07-Queries/07.3_Case_Studies/p-8dcf76a8db/">国王大事与脱离罗马</a>
+      <a href="/07-Queries/07.3_Case_Studies/p-7299a6071c/">安妮·博林的倒台</a>
+      <a href="/07-Queries/07.3_Case_Studies/p-6a19f2cf81/">摩尔审讯中的誓言、良知与沉默</a>
+      <a href="/07-Queries/07.4_Cross_Matrices/p-4afe311307/">铁与血 vs 纸与墨</a>
+    </div>
   </section>
 </div>
 
@@ -116,11 +116,11 @@ tags:
 ## 建议浏览路径
 
 <div class="path-steps">
-  <div class="path-step"><span>01</span><strong>[[01 MOCs/MVKS 总览|MVKS 总览]]</strong><em>先看整体结构</em></div>
-  <div class="path-step"><span>02</span><strong>[[01 MOCs/案例验证总览|案例验证总览]]</strong><em>再看项目产出</em></div>
-  <div class="path-step"><span>03</span><strong>[[01 MOCs/人物总览|人物总览]] / [[01 MOCs/事件总览|事件总览]]</strong><em>进入对象层</em></div>
-  <div class="path-step"><span>04</span><strong>[[06 Theory/文学理论入口|文学理论入口]]</strong><em>补理论框架</em></div>
-  <div class="path-step"><span>05</span><strong>[[07 Queries/07 Queries执行看板|07 Queries 执行看板]]</strong><em>看人机协同如何运作</em></div>
+  <div class="path-step"><span>01</span><strong><a href="/01-MOCs/p-997fe9326d/">MVKS 总览</a></strong><em>先看整体结构</em></div>
+  <div class="path-step"><span>02</span><strong><a href="/01-MOCs/p-74347a7f43/">案例验证总览</a></strong><em>再看项目产出</em></div>
+  <div class="path-step"><span>03</span><strong><a href="/01-MOCs/p-984da3f4ec/">人物总览</a> / <a href="/01-MOCs/p-14f6874315/">事件总览</a></strong><em>进入对象层</em></div>
+  <div class="path-step"><span>04</span><strong><a href="/06-Theory/p-d92e34877b/">文学理论入口</a></strong><em>补理论框架</em></div>
+  <div class="path-step"><span>05</span><strong><a href="/07-Queries/07-Queries执行看板/">07 Queries 执行看板</a></strong><em>看人机协同如何运作</em></div>
 </div>
 
 ## 一句话判断
