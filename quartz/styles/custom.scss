@@ -141,6 +141,160 @@ li.section-li > .section .desc h3 {
   background: rgba(255, 255, 255, 0.95);
 }
 
+body[data-slug="11-Appendix/数字人文问答"] article > h1:first-child,
+body[data-slug^="11-Appendix/数字人文问答/"] article > h1:first-child {
+  display: none;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-hero {
+  position: relative;
+  padding: 1.4rem 1.45rem 1.2rem 1.45rem;
+  border-radius: 24px;
+  border: 1px solid var(--lightgray);
+  background:
+    radial-gradient(circle at top right, rgba(95, 116, 138, 0.16), transparent 32%),
+    radial-gradient(circle at left bottom, rgba(88, 117, 95, 0.16), transparent 30%),
+    linear-gradient(135deg, #fff9f1 0%, #f1ece4 100%);
+  box-shadow: var(--wolf-shadow);
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-kicker {
+  margin: 0 0 0.45rem 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: 700;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-hero h1 {
+  margin: 0;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+  line-height: 1.08;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-lead {
+  margin: 0.95rem 0 0 0;
+  line-height: 1.75;
+  font-size: 1.02rem;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-mini-grid,
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-mini-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-mini-card,
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-card {
+  padding: 1rem 1rem 0.95rem 1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 20px;
+  box-shadow: 0 14px 30px rgba(58, 49, 40, 0.05);
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-mini-card {
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.94), rgba(245, 239, 230, 0.9));
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-mini-card h3,
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-card h3 {
+  display: block;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
+  background: none;
+  color: var(--dark);
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-card li + li {
+  margin-top: 0.45rem;
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-blue {
+  background: linear-gradient(180deg, rgba(95, 116, 138, 0.11), rgba(255, 255, 255, 0.95));
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-green {
+  background: linear-gradient(180deg, rgba(88, 117, 95, 0.12), rgba(255, 255, 255, 0.95));
+}
+
+body[data-slug="11-Appendix/数字人文问答"] .qa-entry-amber {
+  background: linear-gradient(180deg, rgba(165, 82, 34, 0.1), rgba(255, 255, 255, 0.95));
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] .page-header .popover-hint {
+  padding: 1.1rem 1.15rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(135deg, rgba(255, 248, 238, 0.96), rgba(244, 236, 225, 0.9));
+  border: 1px solid var(--lightgray);
+  box-shadow: var(--wolf-shadow);
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] article > p:first-of-type {
+  margin-top: 0.3rem;
+  padding: 1rem 1.05rem;
+  border-left: 5px solid var(--wolf-slate);
+  border-radius: 0 18px 18px 0;
+  background: linear-gradient(180deg, rgba(95, 116, 138, 0.09), rgba(255, 255, 255, 0.95));
+  box-shadow: 0 12px 24px rgba(58, 49, 40, 0.05);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] article > ol {
+  counter-reset: qa-steps;
+  display: grid;
+  gap: 0.9rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] article > ol > li {
+  position: relative;
+  padding: 1rem 1rem 1rem 4rem;
+  border-radius: 20px;
+  border: 1px solid var(--lightgray);
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0.96), rgba(245, 239, 230, 0.9));
+  box-shadow: 0 12px 24px rgba(58, 49, 40, 0.05);
+  line-height: 1.8;
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] article > ol > li::before {
+  counter-increment: qa-steps;
+  content: counter(qa-steps, decimal-leading-zero);
+  position: absolute;
+  left: 0.95rem;
+  top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: white;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+body[data-slug^="11-Appendix/数字人文问答/"] article > ol > li strong:first-child {
+  color: var(--secondary);
+}
+
 body[data-slug="index"] .center article {
   display: flex;
   flex-direction: column;
@@ -378,6 +532,34 @@ body[data-slug="index"] .path-step em {
 }
 
 @media all and (max-width: 800px) {
+  body[data-slug="11-Appendix/数字人文问答"] .qa-hero {
+    padding: 1.1rem 1rem 0.95rem 1rem;
+    border-radius: 20px;
+  }
+
+  body[data-slug="11-Appendix/数字人文问答"] .qa-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  body[data-slug="11-Appendix/数字人文问答"] .qa-mini-grid,
+  body[data-slug="11-Appendix/数字人文问答"] .qa-entry-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-slug^="11-Appendix/数字人文问答/"] .page-header .popover-hint {
+    padding: 0.95rem 0.95rem 0.9rem 0.95rem;
+    border-radius: 18px;
+  }
+
+  body[data-slug^="11-Appendix/数字人文问答/"] article > p:first-of-type {
+    padding: 0.9rem 0.9rem 0.9rem 0.95rem;
+    font-size: 0.98rem;
+  }
+
+  body[data-slug^="11-Appendix/数字人文问答/"] article > ol > li {
+    padding: 0.95rem 0.9rem 0.95rem 3.55rem;
+  }
+
   .page .center article h2 {
     padding: 0.72rem 0.85rem;
     font-size: 1.45rem;
