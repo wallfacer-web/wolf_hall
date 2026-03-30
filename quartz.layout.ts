@@ -1,5 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
+import ProjectNav from "./quartz/components/ProjectNav"
 
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
@@ -38,10 +39,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer({
-      folderDefaultState: "open",
-      useSavedState: false,
-    }),
+    ProjectNav(),
   ],
   right: [
     Component.DesktopOnly(Component.Graph()),
@@ -65,10 +63,7 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer({
-      folderDefaultState: "open",
-      useSavedState: false,
-    }),
+    ProjectNav(),
   ],
   right: [],
 }

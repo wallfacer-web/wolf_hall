@@ -42,5 +42,39 @@ async function ensurePrettyUrlCopies() {
   }
 }
 
+async function rewriteInternalLinks() {
+  const htmlFiles = await collectHtmlFiles(publicDir)
+
+  for (const htmlFile of htmlFiles) {
+    let html = await fs.readFile(htmlFile, "utf8")
+
+    html = html.replace(/href="([^"]+)"/g, (match, href) => {
+      if (
+        href.startsWith("http://") ||
+        href.startsWith("https://") ||
+        href.startsWith("mailto:") ||
+        href.startsWith("#") ||
+        href.includes(".css") ||
+        href.includes(".js") ||
+        href.includes(".xml") ||
+        href.includes(".png") ||
+        href.includes(".jpg") ||
+        href.includes(".svg") ||
+        href.includes(".json") ||
+        href.includes(".pdf") ||
+        href.endsWith("/") ||
+        href.endsWith(".html")
+      ) {
+        return match
+      }
+
+      return `href="${href}/"`
+    })
+
+    await fs.writeFile(htmlFile, html, "utf8")
+  }
+}
+
 await ensurePrettyUrlCopies()
-console.log(`Pretty URL directories generated in: ${publicDir}`)
+await rewriteInternalLinks()
+console.log(`Pretty URL directories and link rewrites generated in: ${publicDir}`)
