@@ -23,6 +23,10 @@ const includeDirs = [
 
 const includeRootFiles = ["README.md"]
 
+function hasExternalVaultSnapshot() {
+  return includeDirs.some((dir) => fs.existsSync(path.join(vaultRoot, dir)))
+}
+
 function resetDir(target) {
   fs.rmSync(target, { recursive: true, force: true })
   fs.mkdirSync(target, { recursive: true })
@@ -34,14 +38,21 @@ function copyIfExists(source, destination) {
   }
 }
 
-resetDir(contentRoot)
+const canSyncFromExternalVault = hasExternalVaultSnapshot()
 
-for (const dir of includeDirs) {
-  copyIfExists(path.join(vaultRoot, dir), path.join(contentRoot, dir))
-}
+if (canSyncFromExternalVault) {
+  resetDir(contentRoot)
 
-for (const file of includeRootFiles) {
-  copyIfExists(path.join(vaultRoot, file), path.join(contentRoot, file))
+  for (const dir of includeDirs) {
+    copyIfExists(path.join(vaultRoot, dir), path.join(contentRoot, dir))
+  }
+
+  for (const file of includeRootFiles) {
+    copyIfExists(path.join(vaultRoot, file), path.join(contentRoot, file))
+  }
+} else {
+  fs.mkdirSync(contentRoot, { recursive: true })
+  console.log("External vault snapshot not found. Reusing tracked content/ for CI build.")
 }
 
 const indexFile = path.join(contentRoot, "index.md")
