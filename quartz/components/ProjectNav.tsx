@@ -18,7 +18,7 @@ const sections: NavSection[] = [
       { label: "研究首页", slug: "index" },
       { label: "MVKS 总览", slug: "01-MOCs/MVKS-总览" },
       { label: "案例验证总览", slug: "01-MOCs/案例验证总览" },
-      { label: "文学理论与阅读框架", slug: "06-Theory/文学理论与阅读框架" },
+      { label: "文学理论入口", slug: "06-Theory/文学理论入口" },
     ],
   },
   {
