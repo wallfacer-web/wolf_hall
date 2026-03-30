@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename)
 const publishRoot = path.resolve(__dirname, "..")
 const vaultRoot = path.resolve(publishRoot, "..")
 const contentRoot = path.join(publishRoot, "content")
+const homepageTemplate = path.join(publishRoot, "site", "homepage.md")
 
 const includeDirs = [
   "01 MOCs",
@@ -43,15 +44,9 @@ for (const file of includeRootFiles) {
   copyIfExists(path.join(vaultRoot, file), path.join(contentRoot, file))
 }
 
-const rootMarkdown = fs
-  .readdirSync(vaultRoot, { withFileTypes: true })
-  .filter((entry) => entry.isFile() && entry.name.endsWith(".md") && entry.name !== "README.md")
-  .map((entry) => entry.name)
-  .sort((a, b) => a.localeCompare(b, "zh-CN"))[0]
-
 const indexFile = path.join(contentRoot, "index.md")
-if (rootMarkdown) {
-  copyIfExists(path.join(vaultRoot, rootMarkdown), indexFile)
+if (fs.existsSync(homepageTemplate)) {
+  copyIfExists(homepageTemplate, indexFile)
 } else if (fs.existsSync(path.join(vaultRoot, "README.md"))) {
   copyIfExists(path.join(vaultRoot, "README.md"), indexFile)
 } else {
