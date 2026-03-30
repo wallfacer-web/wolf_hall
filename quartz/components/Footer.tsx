@@ -10,7 +10,8 @@ interface Options {
 export default ((opts?: Options) => {
   const Footer: QuartzComponent = ({ displayClass, cfg }: QuartzComponentProps) => {
     const year = new Date().getFullYear()
-    const links = opts?.links ?? []
+    const links = opts?.links ?? {}
+
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
@@ -24,6 +25,7 @@ export default ((opts?: Options) => {
             </li>
           ))}
         </ul>
+        <p class="designer-credit">Designed by Toby LUO</p>
       </footer>
     )
   }
