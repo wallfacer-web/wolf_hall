@@ -1,8 +1,11 @@
 ---
-title: 案例三：安妮·博林的倒台
+title: QCase_安妮·博林的倒台
 note_type: query
 status: stable
 query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-confession-details
+archive_ready: true
 target_entities:
   - Anne Boleyn
   - Thomas Cromwell
@@ -20,7 +23,7 @@ tags:
   - anne-boleyn
 ---
 
-# 案例三：安妮·博林的倒台
+# QCase_安妮·博林的倒台
 
 > [!abstract] 核心问题
 > 安妮·博林之死不能被简化为一次单一的宫廷情感事件。  
@@ -82,7 +85,8 @@ tags:
 - `NotebookLM`
 - `GraphRAG global`
 - 现有对象页与理论页
-- [[07 Queries/07.4_Cross_Matrices/QCross_安妮案同案人物比较]]
+- [[QCross_安妮案同案人物比较]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_恩宠、失宠与替代者上位机制]]
 
 ## 三、提问记录与工具调用
 
@@ -191,7 +195,7 @@ tags:
 - 事件页：[[03 Events/安妮·博林倒台]]
 - 制度页：[[04 Institutions/法律与司法体系]]、[[04 Institutions/宫廷庇护体系]]
 - 理论页：[[06 Theory/05 历史小说理论与新历史主义]]
-- 查询页：[[07 Queries/07.4_Cross_Matrices/QCross_安妮案同案人物比较]]
+- 查询页：[[QCross_安妮案同案人物比较]]
 
 ### 执行状态
 

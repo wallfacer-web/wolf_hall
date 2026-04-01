@@ -3,6 +3,9 @@ title: QCross_“铁与血”vs“纸与墨”的物质意象对峙
 note_type: query
 status: stable
 query_type: cross-matrix
+writeback_status: complete
+evidence_gap: graphrag-quotable-material-scenes
+archive_ready: false
 target_entities:
   - Thomas Cromwell
   - Thomas Howard
@@ -75,6 +78,7 @@ tags:
 ### 输入来源
 
 - `Wolf Hall` 三部曲
+- [[07 Queries/07.4_Cross_Matrices/QCross_合法性如何在血统、法律与叙述中被制造]]
 - `NotebookLM`
 - `GraphRAG`
 - 现有制度页与人物页
@@ -111,6 +115,13 @@ What textual patterns in the Wolf Hall trilogy contrast noble lineage and martia
 - 它最适合做成矩阵，而不适合一开始就扩成长篇案例。
 - 一旦跑通，能显著补厚 `05 Concepts` 和 `06 Theory/04`。
 - `NotebookLM` 已经给出第一轮稳定判断：这里比较的不是修辞风格，而是两套权力基础设施的更替，核心是“媒介即权力”。
+
+### 下一轮证据补强方向
+
+- 血统线优先补“贵族如何把门第、土地和身体威势当作天然资格”的英语场景，而不是继续泛问阶层冲突。
+- 文书线优先补“账本、手令、法案、审计和清单如何替代直接威压”的英语场景，而不是继续泛问官僚崛起。
+- 这一轮最值得补的不是抽象概念，而是能把 `blood / sword / rank / land` 与 `paper / ink / ledger / statute / seal` 并置起来的微观场景。
+- 目标不是一次建完意象词表，而是先为两条线各自找到一到两个可直接压进论文段落的例证位点。
 
 ## 四、结构判断
 
@@ -185,6 +196,147 @@ What textual patterns in the Wolf Hall trilogy contrast noble lineage and martia
 - 还没有形成稳定的意象词表。
 - 还需要通过 `GraphRAG` 抓更具体的共现样本。
 
+### 当前最稳定的微观例证位点
+
+#### 1. 血统线
+
+- [[05 Concepts/新人与旧血统]] 已稳定指出：旧贵族对克伦威尔的敌意，不是单纯人格厌恶，而是把出身当作统治资格本身来捍卫。
+- [[04 Institutions/贵族等级与土地制度]] 已稳定指出：门第、封号、婚姻谱系和土地占有共同构成一种看似天然的资格想象，这正是“铁与血”一侧最厚的制度基础。
+- 当前最稳的论文压法是：旧贵族真正依赖的不是单件武器或某个姿态，而是一整套由血统、身体威势和土地延续构成的具身化统治媒介。
+
+#### 2. 文书线
+
+- [[04 Institutions/财政与行政官僚系统]] 已稳定指出：克伦威尔式权力的核心不在显赫头衔，而在于对现金流、文书流、审计和授权流程的实际控制。
+- [[07 Queries/07.4_Cross_Matrices/QCross_合法性如何在血统、法律与叙述中被制造]] 已稳定指出：法律合法性依赖文书、法案、誓言和程序，而不是天然继承的资格。
+- 当前最稳的论文压法是：纸与墨最可怕的地方不在“文雅”，而在它能把暴力、资产接管和身份重写变成可复制、可归档、可远距离执行的现实。
+
+#### 3. 并置线
+
+- 当前最值得补的不是“贵族佩剑、官僚写字”这种泛化对照，而是同一场景里身体威势和文书权力如何彼此较劲。
+- 一条稳定并置路径是：旧贵族以门第、姿态和威望主张资格，新官僚则以法案、审计、命名和记录重新界定资格。
+- 当前最稳的论文压法是：`铁与血` 与 `纸与墨` 的对立，本质上是两套合法性媒介在都铎国家重组中的竞争。
+
+### 最新 GraphRAG local 补证
+
+- `血统线`：
+  - `local` 检索已经稳定返回：`Norfolk lineage / noble blood / inherited rank / estate logic / martial bearing` 这几个点会反复被聚合到同一条 aristocratic legitimacy 线上。
+  - 最可用的补证点不是单一武器意象，而是旧贵族的合法性被组织成 `血统 + 土地 + 身体威势 + 等级展示` 的复合媒介。
+  - 这和 [[05 Concepts/新人与旧血统]]、[[04 Institutions/贵族等级与土地制度]] 的当前判断高度一致。
+- `文书线`：
+  - `local` 检索已经稳定返回：`paper / ink / ledgers / statutes / seals / warrants / audit / records` 会被聚合到 Cromwell 的权力方式上。
+  - 最可用的补证点不是“他会写字”，而是他能把决定转化成文件流、命令流和审计流，使权力获得可复制性。
+  - 这和 [[04 Institutions/财政与行政官僚系统]] 的当前判断高度吻合。
+- `并置线`：
+  - 这一轮 `local` 检索最重要的收获，是它已经能稳定给出同一个高层判断：旧权力依赖具身化、可见化、可继承的权威媒介，新权力依赖可归档、可流通、可法律化的文书媒介。
+  - 也就是说，`铁与血` 与 `纸与墨` 不是装饰性比喻，而是两套现实治理媒介的对峙，这一点已经得到英文检索层面的重复确认。
+
+### 更窄一轮 local 查询的新增收获
+
+- `血统线` 更窄一轮后，`local` 已经开始稳定把 `Norfolk` 拉到前台，并把他的贵族资格组织成：
+  - `lineage`
+  - `rank`
+  - `courtly display`
+  - `estate logic`
+  - `martial bearing`
+- 这意味着现在最有用的英文补证已经不只是“旧贵族重视血统”，而是 `Norfolk-style aristocratic legitimacy` 的几个组成部件开始被稳定打包。
+
+- `文书线` 更窄一轮后，`local` 已经把 Cromwell 一侧压成：
+  - `paperwork`
+  - `drafting legal instruments`
+  - `records`
+  - `statutes`
+  - `administrative control`
+- 这一轮最有用的地方，在于它已经把“Cromwell 的权力来自文书”进一步推进成“文书如何接管叙事与结果”。
+
+- `并置线` 这一轮最有用的补证不是某一句 insult，而是 Norfolk 的 `rank display` 和 Cromwell 的 `administrative authority` 已经开始在同一个返回中被直接并排。
+- 这足以继续支撑本页的核心判断：对立的关键不是人格冲突，而是 `aristocratic display` 与 `documentary control` 的媒介冲突。
+
+### 当前这一轮 GraphRAG 的边界
+
+- `local` 检索已经足以把“媒介即权力”的判断从中文意义层推进到英文样本层。
+- 但这一轮返回仍偏总结性，距离最理想的“可直接引文的场景级证据”还有一段距离。
+- 因此，这张页在 `GraphRAG local` 这一层的最准确状态是：`结构成熟 + 英文样本链已推进到角色对撞层 + 仍缺最可引用的近距离场景`。
+
+### NotebookLM 对比结果
+
+- 参照 [[07 Queries/07.4_Cross_Matrices/QCross_誓言、供词、沉默三种话语装置比较]] 这一轮对照结果，可以先得出一个方法判断：
+  - 对 `QCross` 页来说，`GraphRAG local` 更适合先确认结构链。
+  - `NotebookLM` 更适合在第二轮把结构链推进到更接近场景、措辞和论文表达的层次。
+- 就本页而言，`GraphRAG local` 已经能确认：
+  - `Norfolk -> lineage / rank / display / estate`
+  - `Cromwell -> paper / statutes / records / administrative control`
+- 但它还没有像在 `誓言/供词/沉默` 那页那样，稳定拉出足够可直接引用的高密度场景。
+
+### NotebookLM 第二轮近距离补证
+
+- `血统线`：
+  - `NotebookLM` 已经把 Norfolk 一侧推进到更接近可引场景的层次：
+    - 他在莫尔审判相关场景里把旧贵族写成“`born with our armour on`”的一类人，并带着 `horses and leather and the armourer's shop` 的战争气味。
+    - Brandon 在看比武场景时直接把贵族合法性压成一句很强的媒介对立：`Iron in the blood, not ink.`
+    - Surrey 对 Cromwell 的蔑视则稳定落在 `title does not change what you are` 这一类血统羞辱上，说明国家授予的头衔并不能抹去旧贵族眼中的“出身事实”。
+    - Norfolk 对 Thetford Priory 的执念也很关键，因为那不是单纯宗教保护，而是祖先墓地、Howard 名号与家族延续被一起捆绑成 aristocratic legitimacy 的物质锚点。
+  - 这条线现在最稳的推进是：旧贵族并不只是“相信血统”，而是通过盔甲、气味、珠宝、墓地、门第羞辱和祖先叙事，把血统组织成一种可见、可继承、可展示的权力媒介。
+
+- `文书线`：
+  - `NotebookLM` 已经把 Cromwell 一侧推进到更接近论文引文的层次：
+    - 他对 Percy 的判断直接把旧贵族的边境堡垒逻辑压成过时世界，而现代权力则转到 `the scrape of the pen on the page of the promissory note that pays for the gun and the gunsmith`。
+    - Holbein 肖像中的 `A quill, scissors, papers, his seal in a little bag` 非常关键，因为 Mantel 让他的权力工具不是佩剑，而是羽毛笔、文件和印章。
+    - 在 Smeaton 供词场景里，`Here is the paper and the ink`、`I want words that make sense. Words I can transcribe.` 已经清楚显示：Cromwell 要的不是肉体受刑，而是可录入、可转写、可归档的语言。
+    - 安妮案文书整理场景中的 `smooth it on to white paper` 与给每项指控补进 `and several days before and after` 的操作，则把行政控制推进到“如何让文本足够闭合以承受法律审查”的层级。
+    - Geoffrey Pole 审讯中的表格式记录，也稳定显示旧贵族面对 clerical grid 时的陌生和恐惧。
+  - 这条线现在最稳的推进是：Cromwell 的力量不只来自“会写字”，而是来自把供词、指控、审计、授权和惩罚组织成同一条 document flow。
+
+- `并置线`：
+  - `NotebookLM` 已经给出几处真正可用的对撞场景：
+    - Brandon 那句 `Iron in the blood, not ink` 本身就是旧贵族对文书官僚世界的焦虑性命名。
+    - Surrey 在宫廷内拔匕首伤人，本来是 aristocratic display，但马上被 Cromwell 一侧压回 `draw blood within the precincts of the court` 这一条法规语境里，意味着身体威势被直接翻译成 statute violation。
+    - Percy 试图靠门第、领地与北方势力抵抗时，Cromwell 用 promissory note、财产剥夺和法律处置告诉他：堡垒和号角已经不如债据和命令流重要。
+    - George Boleyn 在法庭上依赖魅力、家世与公开表演，但 Cromwell 最终倚靠的是 `written statements alone` 以及 Jane Rochford 的 deposition。
+  - 这条线最关键的收获是：Mantel 并不是把“贵族展示”与“官僚写作”写成两个平行意象簇，而是在同一权力现场里反复让 display 被 records、threat 被 statute、lineage 被 deposition 重新编码。
+
+### 当前这一轮 NotebookLM 的推进结果
+
+- 本页现在已经不止是“结构成熟”，而是进入了 `结构成熟 + 关键场景链已具备 + 可直接压论文段的英语措辞已出现` 的状态。
+- 如果后续还要继续补，不应该再泛问“新人与旧血统”，而应围绕以下三个近距离方向继续窄追：
+  - Norfolk / Surrey 的 rank display 与 lineage insult
+  - Cromwell 的 desk, seal, clerk, grid, warrant
+  - 同场景里 `draw blood` 如何被翻译成 `statute`、`record` 或 `deposition`
+
+### 当前最有效的工具分工
+
+- `GraphRAG local = 结构探针`
+  - 先确认血统线、文书线、并置线到底值不值得追。
+- `NotebookLM = 近距离补证主力`
+  - 下一轮最适合直接问：
+    - Norfolk 如何把 lineage 和 rank 当作可见威权
+    - Cromwell 如何通过 paper / statutes / records 行使权力
+    - Mantel 如何在同场景里让 aristocratic display 与 documentary control 对撞
+- 因此，本页这一轮已经完成了“先用 `GraphRAG local` 确认结构，再用 `NotebookLM` 推进到场景层”的最优路径。
+- 下一步不再是继续补同类证据，而是把这批场景回写到制度页或拆出一个更轻量的意象词表页。
+
+### 下一轮可直接复用的 GraphRAG 窄问法
+
+#### 血统线
+
+```text
+What scenes in Hilary Mantel's Wolf Hall trilogy associate aristocratic legitimacy with bloodline, rank, land, bodily display, or martial presence?
+Focus on Norfolk, lineage insults, rank display, estate logic, and inherited authority.
+```
+
+#### 文书线
+
+```text
+What scenes in Hilary Mantel's Wolf Hall trilogy associate Cromwell's power with paper, ink, ledgers, statutes, seals, warrants, or administrative records?
+Focus on paperwork, audit, command flow, and the conversion of decisions into documents.
+```
+
+#### 并置线
+
+```text
+What scenes in Hilary Mantel's Wolf Hall trilogy most clearly contrast bodily aristocratic authority with bureaucratic documentary authority?
+Focus on moments where rank, display, lineage, or threat are set against writing, legal instruments, or records.
+```
+
 ## 八、研究意义
 
 ### 1. 对理论页的意义
@@ -196,10 +348,12 @@ What textual patterns in the Wolf Hall trilogy contrast noble lineage and martia
 ### 2. 对概念页的意义
 
 - 最适合催生或补厚 `新人与旧血统`、`合法性`、`官僚化` 等概念页。
+- 也能反向支撑 [[07 Queries/07.4_Cross_Matrices/QCross_合法性如何在血统、法律与叙述中被制造]]，因为它把其中的 `血统合法性` 与 `法律合法性` 压成了可见的物质媒介差异。
 
 ### 3. 对制度页的意义
 
 - 能补厚 [[04 Institutions/财政与行政官僚体系]] 与 [[04 Institutions/贵族等级与土地制度]]。
+- 现在 `NotebookLM` 已经把三条线推进到场景层，所以这页已经从“意义判断成熟”推进到“样本密度成熟”，成为 `07.4` 中最适合承接物质性理论段的一张矩阵页。
 
 ## 九、回写去向与执行
 
@@ -212,21 +366,23 @@ What textual patterns in the Wolf Hall trilogy contrast noble lineage and martia
 
 ### 执行状态
 
-- [ ] 已回写理论页
-- [ ] 已回写概念页
+- [x] 已回写理论页
+- [x] 已回写概念页
 - [ ] 已回写制度页
+- [x] 已挂接相关查询页
 - [ ] 已建立意象词表
+- [x] 已补入 NotebookLM 场景级证据
 
 ## 十、残留问题
 
-- 是否要进一步拆出 `QBatch_意象词表与样本段落清单`？
+- 是否要进一步拆出 `QBatch_意象词表与样本段落清单`，把 `armour / leather / diamonds / quill / seal / paper / white paper / promissory note` 固定成可复用词表？
 - 哪些人物最适合作为这组对立的稳定代表？
 - 这一页更应该靠 `GraphRAG` 词项共现，还是靠 `NotebookLM` 长段解释起步？
 
 ## 十一、可直接用于论文的压缩判断
 
-1. 《Wolf Hall》中的新旧权力冲突，不只通过人物立场展开，也通过物质媒介的差异展开：旧贵族更依赖血统、佩剑与身体威势，新官僚更依赖账本、法案与墨水。
+1. 《Wolf Hall》中的新旧权力冲突，不只通过人物立场展开，也通过物质媒介的差异展开：旧贵族更依赖盔甲、珠宝、墓地、门第羞辱与身体威势，新官僚更依赖羽毛笔、印章、账本、法案和白纸黑字。
 2. 因此，“铁与血”对“纸与墨”的对立并不是装饰性意象，而是封建性统治技术向科层制统治技术转移的文学显影。
-3. 曼特尔正是通过这些物质差异，把抽象的国家重组写成可见、可触、可记录的权力基础设施更替。
+3. 曼特尔反复安排同一种结构冲突：贵族试图用 rank、display 与威吓主张天然资格，克伦威尔则用 statute、deposition、audit 和 record 把这种资格重新编码。
 4. 在《Wolf Hall》的权力拓扑学中，墨水与纸张并不是中性的记录媒介，而是能够把命名、供词、法案与资产清单转化为现实力量的行动装置。
 5. 旧贵族对克伦威尔式官僚的生理性厌恶，归根结底来自一种阶级恐慌：他们感到自身基于血统和身体的统治合法性，正在被程序、档案和文本合法性所取代。

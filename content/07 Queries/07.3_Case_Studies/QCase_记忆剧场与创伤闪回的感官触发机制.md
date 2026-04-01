@@ -1,8 +1,11 @@
 ---
 title: QCase_记忆剧场与创伤闪回的感官触发机制
 note_type: query
-status: active
-query_type: case
+status: stable
+query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-sensory-examples
+archive_ready: false
 target_entities:
   - "[[02 People/托马斯·克伦威尔]]"
   - "[[02 People/托马斯·沃尔西]]"

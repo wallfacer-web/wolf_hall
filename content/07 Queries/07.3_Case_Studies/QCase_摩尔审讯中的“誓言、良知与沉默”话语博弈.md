@@ -1,8 +1,11 @@
 ---
 title: QCase_摩尔审讯中的“誓言、良知与沉默”话语博弈
 note_type: query
-status: active
-query_type: case
+status: stable
+query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-trial-examples
+archive_ready: false
 target_entities:
   - "[[02 People/托马斯·莫尔]]"
   - "[[02 People/托马斯·克伦威尔]]"

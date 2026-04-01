@@ -1,8 +1,11 @@
 ---
-title: 案例二：国王大事与英格兰脱离罗马
+title: QCase_国王大事与英格兰脱离罗马
 note_type: query
 status: stable
 query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-legal-examples
+archive_ready: true
 target_entities:
   - Henry VIII
   - Thomas Cromwell
@@ -20,7 +23,7 @@ tags:
   - kings-great-matter
 ---
 
-# 案例二：国王大事与英格兰脱离罗马
+# QCase_国王大事与英格兰脱离罗马
 
 > [!abstract] 核心问题
 > 国王大事在《Wolf Hall》中不是单纯的婚姻危机。  

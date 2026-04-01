@@ -31,10 +31,19 @@ tags:
 - [[07 Queries/07.3_Case_Studies/QCase_宫廷空间拓扑与“接近权”的情感映射]]
 - [[07 Queries/07.3_Case_Studies/QCase_记忆剧场与创伤闪回的感官触发机制]]
 
+### 已建 `QBatch`
+
+- [[07 Queries/07.2_Batch_Tasks/QBatch_核心人物第二组批处理]]
+
 ### 已建 `QCross`
 
-- [[07 Queries/07.4_Cross_Matrices/QCross_安妮案同案人物比较]]
+- [[QCross_安妮案同案人物比较]]
 - [[07 Queries/07.4_Cross_Matrices/QCross_“铁与血”vs“纸与墨”的物质意象对峙]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_誓言、供词、沉默三种话语装置比较]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_恩宠、失宠与替代者上位机制]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_宫廷内室、议会与修道院三种权力空间]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_合法性如何在血统、法律与叙述中被制造]]
+- [[07 Queries/07.4_Cross_Matrices/QCross_交叉矩阵规划]]
 
 ## 二、完成度看板
 
@@ -49,7 +58,20 @@ tags:
 | `QCase_国王大事与英格兰脱离罗马` | 是 | 已有前序整合 | 是 | 可补 `GraphRAG` 法条例子 |
 | `QCross_安妮案同案人物比较` | 是 | 已整合 | 是 | 可维持当前状态 |
 
-## 三、这一轮已经形成闭环的主线
+## 三、统一状态字段
+
+为避免后续继续靠记忆维护，本层查询页统一补三项 frontmatter：
+
+- `writeback_status`：标记主要回写是否完成
+- `evidence_gap`：只保留当前最关键的一个缺口
+- `archive_ready`：标记该页是否已经接近冻结/归档前状态
+
+当前约定：
+
+- `writeback_status: complete` 不等于“没有缺口”，只表示主要回写已经做完
+- `evidence_gap` 优先写最影响下一步行动的那一个，不堆长清单
+- `archive_ready: true` 只给结构稳定、回写完成、近期不准备继续深挖的页
+## 四、这一轮已经形成闭环的主线
 
 ### 1. 微观叙事机制
 
@@ -95,7 +117,7 @@ tags:
   - [[06 Theory/01 叙事学]]
   - [[06 Theory/02 文化记忆研究]]
 
-## 四、当前最大的缺口
+## 五、当前最大的缺口
 
 ### 1. `GraphRAG` 细例层仍偏薄
 
@@ -103,12 +125,12 @@ tags:
 - 真正还缺的是英文原典近距离例子。
 - 这意味着 `07 Queries` 目前更像“意义层与结构层已成型”，但“证据密度”还没均匀补齐。
 
-### 2. 状态管理还没有完全收口
+### 2. 状态管理已开始收口，但还没有用到看板层
 
-- 多数页实际上已经从 `WIP` 进入“可稳定使用”状态。
-- 但还没有统一标出哪些页已经适合归档前冻结，哪些页仍需要继续追问。
+- 查询页 frontmatter 现在已经补入 `writeback_status`、`evidence_gap` 和 `archive_ready`。
+- 下一步要做的是把这些字段进一步汇总成可视看板，而不是继续手工描述。
 
-## 五、下一步最合理的顺序
+## 六、下一步最合理的顺序
 
 ### 优先级 A：给高价值页补 `GraphRAG`
 
@@ -127,11 +149,11 @@ tags:
 ### 优先级 C：准备首批归档候选
 
 - 首批接近“归档准备”的页：
-  - [[07 Queries/07.4_Cross_Matrices/QCross_安妮案同案人物比较]]
+  - [[QCross_安妮案同案人物比较]]
   - [[07 Queries/07.3_Case_Studies/QCase_国王大事与英格兰脱离罗马]]
   - [[07 Queries/07.3_Case_Studies/QCase_安妮·博林的倒台]]
 
-## 六、压缩判断
+## 七、压缩判断
 
 - `07 Queries` 现在最重要的成果不是页数增加，而是已经拥有一批真正可反向支撑 `02-06` 层的中层判断页。
 - 当前最需要补的不是新的问题，而是让已经跑通的高价值页获得更高密度的英文例子支撑。

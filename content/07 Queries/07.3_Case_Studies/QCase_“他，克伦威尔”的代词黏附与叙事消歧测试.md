@@ -3,6 +3,9 @@ title: QCase_“他，克伦威尔”的代词黏附与叙事消歧测试
 note_type: query
 status: stable
 query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-close-reading-examples
+archive_ready: false
 target_entities:
   - Thomas Cromwell
 applied_theory:

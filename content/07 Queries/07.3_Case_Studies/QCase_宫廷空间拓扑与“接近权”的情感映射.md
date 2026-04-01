@@ -1,8 +1,11 @@
 ---
 title: QCase_宫廷空间拓扑与“接近权”的情感映射
 note_type: query
-status: active
-query_type: case
+status: stable
+query_type: case-study
+writeback_status: complete
+evidence_gap: graphrag-space-lexicon
+archive_ready: false
 target_entities:
   - "[[04 Institutions/宫廷庇护体系]]"
   - "[[02 People/亨利八世]]"
@@ -90,6 +93,7 @@ tags:
 - `NotebookLM`
 - `GraphRAG global`
 - 现有对象页、事件页、制度页、理论页
+- 相关比较页：[[07 Queries/07.4_Cross_Matrices/QCross_宫廷内室、议会与修道院三种权力空间]]
 
 ## 三、提问记录与工具调用
 
