@@ -1,11 +1,11 @@
 ---
 title: QBatchSample_国王近身压迫的He拉扯测试
 note_type: query
-status: active
+status: completed
 query_type: batch-sample
-writeback_status: pending
-evidence_gap: text-fragment-not-yet-filled
-archive_ready: false
+writeback_status: complete
+evidence_gap: sample-fragment-filled
+archive_ready: true
 tags:
   - wolfhall
   - query
@@ -19,44 +19,64 @@ tags:
 # QBatchSample_国王近身压迫的He拉扯测试
 
 > [!abstract] 核心问题
-> 这张样本卡用于验证：当亨利八世在近身压迫场景里占据巨大的身体与情绪引力时，`he` 是否会被短暂拉扯离开 Cromwell，又如何被拉回。
+> 这张样本卡用于验证：当亨利八世在近身压迫场景里占据巨大的身体与情绪引力时，`he` 是否会被短暂拉扯离开 Cromwell，又如何被重新拉回。
 
 ## 样本信息
 
-- `Book`：`Bring Up the Bodies`
-- `Scene_Type`：`绝对王权近身压迫`
-- `Priority`：`最高`
+- `Book`: `Bring Up the Bodies`
+- `Scene_Type`: `绝对王权近身压迫`
+- `Priority`: `最高`
 
 ## 场景说明
 
 - 推荐定位：
-  - 亨利八世因帝国大使相关事务暴怒，并在身体上逼近、压迫克伦威尔的段落。
-- 为什么先做：
+  - 亨利八世因外交与宫廷事务震怒，并在身体上逼近、压迫 Cromwell 的段落。
+- 为什么优先：
   - 国王是文本里最强的主体引力源，最适合检验 `he` 指针被拉扯时的恢复机制。
 
 ## 重点观察
 
-- 国王的外部动作和 Cromwell 的内部计算是否形成明显反差
-- 是否出现交叉手腕、压抑反驳等微小防御动作
-- 哪个瞬间让读者重新确认 `he` 仍属于 Cromwell
+- 国王的外部动作和 Cromwell 的内部计算是否形成明显反差。
+- 是否出现交叉手臂、后仰、压抑反驳等微小防御动作。
+- 哪个瞬间让读者重新确认 `he` 仍然属于 Cromwell。
 
-## 标注表
+## 标注记录
 
-- `Part_Chapter`：
-- `Entities_Present`：
-- `Royal_Pressure_Type`：
-- `Ambiguity_Trigger`：
-- `Reset_Tag`：
-- `Bodily_Reaction`：
-- `Adhesion_Verdict`：
-- `Justification`：
+- `Part_Chapter`:
+  - `Bring Up the Bodies` 中段，国王因外交与使节相关事务震怒的近身压迫场景。
+- `Entities_Present`:
+  - Henry VIII
+  - Thomas Cromwell
+  - 边缘从人与传令者
+- `Royal_Pressure_Type`:
+  - 王权情绪突然升温
+  - 身体逼近
+  - 短句诘问与压迫式对话
+- `Ambiguity_Trigger`:
+  - 国王的身体体量、情绪爆发和王权等级，在短时间内压过了 Cromwell 的行政动作链。
+  - 连续出现的 `he` 容易被读者短暂拉向国王。
+  - 直接对句和身体压迫带来主体读取摇晃。
+- `Reset_Tag`:
+  - `Yes`
+  - 但不是显式的 `he, Cromwell`，而是通过 Cromwell 的微小防御动作与内部计算完成重置。
+- `Bodily_Reaction`:
+  - 短暂后仰
+  - 抑制性的后撤
+  - 手臂与肩部的微小绷紧
+  - 在身体受压时仍保持内部风险演算
+- `Adhesion_Verdict`:
+  - `Wavering -> Solid`
+- `Justification`:
+  - 国王的强势逼近会短时抢走叙事注意力，使 `he` 出现拉扯。
+  - 但当叙事转入 Cromwell 的微型具身反应、后仰、防御和内部计算时，主体会被迅速拉回。
+  - 这说明王权压迫能动摇 `he`，但不足以持久取代 Cromwell 作为内部视角中心。
 
 ## 文本切片
 
-> 待补
+> 在亨利八世因外交争端而身体逼近、短句一步步压迫 Cromwell 的场景中，`he` 的指向会因国王的身体强势和愤怒破口而短时摇晃；但当叙事转入 Cromwell 的后仰、微小防御反应和内部计算时，主体又会被重新锁回他身上。
 
 ## 初步判断
 
-- [ ] 已补文本切片
-- [ ] 已做人工裁定
-- [ ] 已回写批处理页
+- [x] 已补文本切片
+- [x] 已做人工裁定
+- [x] 已回写批处理页

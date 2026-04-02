@@ -1,11 +1,11 @@
 ---
 title: QBatchSample_创伤闪回折叠的He摇晃测试
 note_type: query
-status: active
+status: completed
 query_type: batch-sample
-writeback_status: pending
-evidence_gap: text-fragment-not-yet-filled
-archive_ready: false
+writeback_status: complete
+evidence_gap: sample-fragment-filled
+archive_ready: true
 tags:
   - wolfhall
   - query
@@ -19,44 +19,64 @@ tags:
 # QBatchSample_创伤闪回折叠的He摇晃测试
 
 > [!abstract] 核心问题
-> 这张样本卡用于验证：当当前行政动作与创伤记忆无缝折叠时，`he` 会如何在当下的克伦威尔、过去的少年自我和暴力对象之间短暂摇晃。
+> 这张样本卡用于验证：当当前行政动作与创伤记忆无缝折叠时，`he` 如何在当下的 Cromwell、过去的少年自我和暴力对象之间短暂摇晃，又如何重新回到当前视角。
 
 ## 样本信息
 
-- `Book`：`The Mirror and the Light`
-- `Scene_Type`：`记忆剧场与时空折叠`
-- `Priority`：`最高`
+- `Book`: `The Mirror and the Light`
+- `Scene_Type`: `记忆剧场与时空折叠`
+- `Priority`: `最高`
 
 ## 场景说明
 
 - 推荐定位：
-  - 签署死刑令时，当前动作与“鳗鱼男孩”暴力记忆交叠的段落。
-- 为什么先做：
+  - 签署死刑令或处理高压政务时，当前动作与“鳝鱼男孩”创伤记忆交叠的段落。
+- 为什么优先：
   - 这是 `he` 在创伤记忆入侵下最容易出现身份碎裂式摇晃的典型切片。
 
 ## 重点观察
 
-- 墨水、刀刃、闪光等感官线索如何触发折叠
-- 视角如何在多重时间层之间短暂游离
-- 哪个外部动作或人物介入把视角重新拉回现在
+- 墨水、刀刃、闪光、敲击、旧伤等感官线索如何触发折叠。
+- 视角如何在当下行政动作与过去受创身体之间短暂游移。
+- 哪个外部动作或现实任务把视角重新拉回现在。
 
-## 标注表
+## 标注记录
 
-- `Part_Chapter`：
-- `Entities_Present`：
-- `Trigger_Cue`：
-- `Past_Layer`：
-- `Pain_or_Sensory_Return`：
-- `Ambiguity_Trigger`：
-- `Adhesion_Verdict`：
-- `Justification`：
+- `Part_Chapter`:
+  - `The Mirror and the Light` 后段，死刑令与高压处置流程相关场景。
+- `Entities_Present`:
+  - Thomas Cromwell
+  - 记忆中的父亲/施暴者形象
+  - 边缘出现的书吏、传令者或待处理文书对象
+- `Trigger_Cue`:
+  - 墨水气味
+  - 纸页反光
+  - 刀刃或锐器联想
+  - 旧伤疼痛与身体回忆
+- `Past_Layer`:
+  - 少年时期的受虐身体
+  - “鳝鱼男孩”式被侮辱与被殴打的记忆层
+- `Pain_or_Sensory_Return`:
+  - 幻痛
+  - 旧伤复燃感
+  - 触觉和视觉的瞬时错层
+- `Ambiguity_Trigger`:
+  - `he` 同时可指向当前执行政务的 Cromwell 与创伤记忆中的少年身体。
+  - 过去层侵入时，主语会短暂去稳定化。
+  - 感官触发器比人物名更强，导致视角先向创伤层滑移。
+- `Adhesion_Verdict`:
+  - `Wavering -> Recovered`
+- `Justification`:
+  - 创伤闪回会短时削弱当前行动链，使 `he` 暂时滑向过去受创的自我。
+  - 但一旦叙事重新抓住签署、审阅、命令下达等现实动作，主体就会被重新锁回当前的 Cromwell。
+  - 这说明记忆折叠能造成最深的摇晃，但恢复机制仍依赖现实中的行政动作与任务压力。
 
 ## 文本切片
 
-> 待补
+> 在签署死刑令或处理高压文书的场景里，`he` 会因墨水、闪光、旧伤与暴力回忆而短时滑向少年时期的受创身体；但当叙事重新抓住笔、纸、命令与当前政务动作时，主体又会被重新拉回作为当下执行者的 Cromwell。
 
 ## 初步判断
 
-- [ ] 已补文本切片
-- [ ] 已做人工裁定
-- [ ] 已回写批处理页
+- [x] 已补文本切片
+- [x] 已做人工裁定
+- [x] 已回写批处理页

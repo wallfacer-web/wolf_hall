@@ -1,11 +1,11 @@
 ---
 title: QBatch_核心人物第二组批处理
 note_type: query
-status: active
+status: completed
 query_type: batch-task
-writeback_status: partial
+writeback_status: complete
 evidence_gap: graphrag-examples-thin
-archive_ready: false
+archive_ready: true
 target_entities:
   - Thomas Wolsey
   - Jane Seymour
@@ -24,6 +24,14 @@ tags:
   - batch
   - people
 ---
+> [!success] Completion Update
+> This batch is complete.
+> Writeback is already present in:
+> [[02 People/托马斯·沃尔西]]
+> [[02 People/简·西摩]]
+> [[02 People/斯蒂芬·加德纳]]
+> [[02 People/托马斯·霍华德]]
+
 
 # QBatch_核心人物第二组批处理
 

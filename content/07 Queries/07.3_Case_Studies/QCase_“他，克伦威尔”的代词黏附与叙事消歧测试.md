@@ -4,7 +4,7 @@ note_type: query
 status: stable
 query_type: case-study
 writeback_status: complete
-evidence_gap: graphrag-close-reading-examples
+evidence_gap: cross-page-writeback-pending
 archive_ready: false
 target_entities:
   - Thomas Cromwell

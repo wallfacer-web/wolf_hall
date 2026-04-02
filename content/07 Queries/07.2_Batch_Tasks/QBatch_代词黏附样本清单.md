@@ -1,11 +1,11 @@
 ---
 title: QBatch_代词黏附样本清单
 note_type: query
-status: active
+status: completed
 query_type: batch-task
-writeback_status: partial
-evidence_gap: sample-fragments-not-yet-collected
-archive_ready: false
+writeback_status: complete
+evidence_gap: batch-complete
+archive_ready: true
 target_entities:
   - Thomas Cromwell
 applied_theory:
