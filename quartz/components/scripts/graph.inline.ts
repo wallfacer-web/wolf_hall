@@ -17,7 +17,7 @@ import {
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
-import { FullSlug, SimpleSlug, getFullSlug, joinSegments, simplifySlug } from "../../util/path"
+import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -72,20 +72,6 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const slug = simplifySlug(fullSlug)
   const visited = getVisited()
   removeAllChildren(graph)
-
-  function navigateToNode(target: SimpleSlug) {
-    try {
-      const decodedPath = decodeURIComponent(window.location.pathname)
-      const normalizedSlug = "/" + simplifySlug(fullSlug as FullSlug)
-      const slugIndex = decodedPath.lastIndexOf(normalizedSlug)
-      const siteBase = slugIndex >= 0 ? decodedPath.slice(0, slugIndex + 1) : "/"
-      const absolutePath = joinSegments(siteBase, simplifySlug(target as FullSlug))
-      window.spaNavigate(new URL(encodeURI(absolutePath), window.location.origin))
-    } catch {
-      const absolutePath = "/" + simplifySlug(target as FullSlug)
-      window.spaNavigate(new URL(encodeURI(absolutePath), window.location.origin))
-    }
-  }
 
   let {
     drag: enableDrag,
@@ -496,14 +482,16 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            navigateToNode(node.id)
+            const targ = resolveRelative(fullSlug, node.id)
+            window.spaNavigate(new URL(targ, window.location.toString()))
           }
         }),
     )
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        navigateToNode(node.simulationData.id)
+        const targ = resolveRelative(fullSlug, node.simulationData.id)
+        window.spaNavigate(new URL(targ, window.location.toString()))
       })
     }
   }
