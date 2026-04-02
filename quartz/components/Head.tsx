@@ -35,6 +35,25 @@ export default (() => {
       (e) => e.name === CustomOgImagesEmitterName,
     )
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
+    const duplicatePathRedirectScript = `
+      (() => {
+        const { pathname, search, hash } = window.location
+        const segments = pathname.split("/").filter(Boolean)
+        if (segments.length < 3) return
+
+        const normalized = [segments[0]]
+        for (let i = 1; i < segments.length; i++) {
+          if (segments[i] !== segments[i - 1]) {
+            normalized.push(segments[i])
+          }
+        }
+
+        if (normalized.length === segments.length) return
+
+        const nextPath = "/" + normalized.join("/")
+        window.location.replace(nextPath + search + hash)
+      })()
+    `
 
     return (
       <head>
@@ -85,6 +104,7 @@ export default (() => {
         <link rel="icon" href={iconPath} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
+        <script>{duplicatePathRedirectScript}</script>
 
         {css.map((resource) => CSSResourceToStyleElement(resource, true))}
         {js
