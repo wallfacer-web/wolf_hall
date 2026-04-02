@@ -73,14 +73,18 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
   const visited = getVisited()
   removeAllChildren(graph)
 
-  const decodedPath = decodeURIComponent(window.location.pathname)
-  const normalizedSlug = "/" + simplifySlug(fullSlug as FullSlug)
-  const slugIndex = decodedPath.lastIndexOf(normalizedSlug)
-  const siteBase = slugIndex >= 0 ? decodedPath.slice(0, slugIndex + 1) : "/"
-
   function navigateToNode(target: SimpleSlug) {
-    const absolutePath = joinSegments(siteBase, simplifySlug(target as FullSlug))
-    window.spaNavigate(new URL(encodeURI(absolutePath), window.location.origin))
+    try {
+      const decodedPath = decodeURIComponent(window.location.pathname)
+      const normalizedSlug = "/" + simplifySlug(fullSlug as FullSlug)
+      const slugIndex = decodedPath.lastIndexOf(normalizedSlug)
+      const siteBase = slugIndex >= 0 ? decodedPath.slice(0, slugIndex + 1) : "/"
+      const absolutePath = joinSegments(siteBase, simplifySlug(target as FullSlug))
+      window.spaNavigate(new URL(encodeURI(absolutePath), window.location.origin))
+    } catch {
+      const absolutePath = "/" + simplifySlug(target as FullSlug)
+      window.spaNavigate(new URL(encodeURI(absolutePath), window.location.origin))
+    }
   }
 
   let {
