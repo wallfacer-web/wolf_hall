@@ -80,13 +80,23 @@ const ProjectNav: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
 ProjectNav.css = `
 .project-nav {
   margin-top: 1rem;
-  padding-top: 0.5rem;
+  padding: 0.9rem;
   border-top: 1px solid var(--lightgray);
+  border-radius: 20px;
+  border: 1px solid var(--lightgray);
+  background:
+    linear-gradient(180deg, rgba(255, 248, 238, 0.96), rgba(244, 236, 225, 0.92));
+  box-shadow: var(--wolf-shadow);
+  max-height: calc(100dvh - 13rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
 }
 
 .project-nav h2 {
   margin: 0 0 0.75rem 0;
   font-size: 1rem;
+  color: var(--dark);
 }
 
 .project-nav-section + .project-nav-section {
@@ -101,23 +111,56 @@ ProjectNav.css = `
 
 .project-nav-section ul {
   margin: 0;
-  padding-left: 1rem;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
 }
 
 .project-nav-section li {
-  margin: 0.25rem 0;
+  margin: 0;
 }
 
 .project-nav-section a {
+  display: block;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
   color: var(--darkgray);
   text-decoration: none;
   line-height: 1.45;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
 }
 
 .project-nav-section a:hover,
 .project-nav-section a.active {
   color: var(--secondary);
   text-decoration: underline;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(53, 44, 35, 0.08);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@media all and (max-width: 1100px) {
+  .project-nav {
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .project-nav-section ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem 0.65rem;
+  }
+}
+
+@media all and (max-width: 520px) {
+  .project-nav-section ul {
+    grid-template-columns: 1fr;
+  }
 }
 `
 

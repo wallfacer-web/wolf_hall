@@ -115,6 +115,12 @@ li.section-li > .section .desc h3 {
   letter-spacing: -0.03em;
 }
 
+.page .left.sidebar {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
 .project-nav {
   border-radius: 20px;
   border: 1px solid var(--lightgray);
@@ -651,6 +657,11 @@ body[data-slug="index"] .path-step em {
 
   .left.sidebar .page-title {
     margin-bottom: 0.2rem;
+  }
+
+  .page .left.sidebar {
+    overflow: visible;
+    scrollbar-gutter: auto;
   }
 
   .left.sidebar > .flex-component {
