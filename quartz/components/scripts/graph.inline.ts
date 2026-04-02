@@ -17,7 +17,7 @@ import {
 import { Text, Graphics, Application, Container, Circle } from "pixi.js"
 import { Group as TweenGroup, Tween as Tweened } from "@tweenjs/tween.js"
 import { registerEscapeHandler, removeAllChildren } from "./util"
-import { FullSlug, SimpleSlug, getFullSlug, resolveRelative, simplifySlug } from "../../util/path"
+import { FullSlug, SimpleSlug, getFullSlug, simplifySlug } from "../../util/path"
 import { D3Config } from "../Graph"
 
 type GraphicsInfo = {
@@ -61,6 +61,17 @@ function addToVisited(slug: SimpleSlug) {
   const visited = getVisited()
   visited.add(slug)
   localStorage.setItem(localStorageKey, JSON.stringify([...visited]))
+}
+
+function buildGraphTargetUrl(target: FullSlug | SimpleSlug): URL {
+  const normalizedTarget = simplifySlug(target as FullSlug)
+  const currentSlug = simplifySlug(getFullSlug(window))
+  const pathSegments = window.location.pathname.split("/").filter(Boolean)
+  const slugSegments = currentSlug === "/" ? [] : currentSlug.split("/")
+  const baseSegments = pathSegments.slice(0, Math.max(0, pathSegments.length - slugSegments.length))
+  const targetSegments = normalizedTarget === "/" ? [] : normalizedTarget.split("/")
+  const absolutePath = "/" + [...baseSegments, ...targetSegments].join("/")
+  return new URL(absolutePath, window.location.origin)
 }
 
 type TweenNode = {
@@ -482,16 +493,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
           // if the time between mousedown and mouseup is short, we consider it a click
           if (Date.now() - dragStartTime < 500) {
             const node = graphData.nodes.find((n) => n.id === event.subject.id) as NodeData
-            const targ = resolveRelative(fullSlug, node.id)
-            window.spaNavigate(new URL(targ, window.location.toString()))
+            window.spaNavigate(buildGraphTargetUrl(node.id))
           }
         }),
     )
   } else {
     for (const node of nodeRenderData) {
       node.gfx.on("click", () => {
-        const targ = resolveRelative(fullSlug, node.simulationData.id)
-        window.spaNavigate(new URL(targ, window.location.toString()))
+        window.spaNavigate(buildGraphTargetUrl(node.simulationData.id))
       })
     }
   }
