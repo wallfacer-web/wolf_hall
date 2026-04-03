@@ -1,0 +1,14 @@
+{
+  "person": ["title", "note_type", "book", "role", "importance"],
+  "event": ["title", "note_type", "date_start", "importance"],
+  "institution": ["title", "note_type", "importance"],
+  "concept": ["title", "note_type", "importance"],
+  "text_unit": ["title", "note_type"],
+  "query": ["title", "note_type", "status"],
+  "moc": ["title", "note_type"],
+  "guide": ["title", "note_type"],
+  "dashboard": ["title", "note_type"],
+  "inbox": ["title", "note_type"],
+  "source_index": ["title", "note_type"],
+  "workspace": ["title", "note_type"]
+}
