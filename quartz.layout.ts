@@ -42,6 +42,14 @@ export const defaultContentPageLayout: PageLayout = {
     ProjectNav(),
   ],
   right: [
+    Component.DesktopOnly(
+      Component.Explorer({
+        title: "库目录",
+        folderDefaultState: "open",
+        folderClickBehavior: "link",
+        useSavedState: false,
+      }),
+    ),
     Component.DesktopOnly(Component.Graph()),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.DesktopOnly(Component.Backlinks()),
@@ -65,5 +73,14 @@ export const defaultListPageLayout: PageLayout = {
     }),
     ProjectNav(),
   ],
-  right: [],
+  right: [
+    Component.DesktopOnly(
+      Component.Explorer({
+        title: "库目录",
+        folderDefaultState: "open",
+        folderClickBehavior: "link",
+        useSavedState: false,
+      }),
+    ),
+  ],
 }
